@@ -128,16 +128,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Book.cpp" />
-    <ClCompile Include="Includes.cpp" />
+    <ClCompile Include="include.cpp" />
     <ClCompile Include="Library.cpp" />
-    <ClCompile Include="LibraryManagmentSystem.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="Member.cpp" />
     <ClCompile Include="Member.h" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Book.h" />
-    <ClInclude Include="Includes.h" />
-    <ClInclude Include="Interface.h" />
+    <ClInclude Include="include.h" />
     <ClInclude Include="Library.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

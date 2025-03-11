@@ -1,15 +1,33 @@
 ﻿// LibraryManagmentSystem.cpp : Ten plik zawiera funkcję „main”. W nim rozpoczyna się i kończy wykonywanie programu.
 //
+#include <iostream>
+#include "Library.h"
+#include "Member.h"
 
-#include "Includes.h"
+
 
 using namespace std;
 
 
 int main()
 {
-    
-    char* authorInput=new char[32];
+	Library PK_LIB;
+	std::wstring autorzy[] = { L"Adam Mickiewicz",L"Juliusz Słowacki",L"George Orwell" };
+	std::wstring tytuly[] = { L"Dziady część III",L"Kordian",L"Rok 1984" };
+	std::string isbn[] = { "3029546345","5134592343","5431928382"};
+	//std::string invalid_isbn[] = {"","3510439514759813475","43"}
+	for (int i = 0; i < size(autorzy); i++) {
+		Book nowaKsiazka = Book(tytuly[i], autorzy[i], isbn[i]);
+		PK_LIB.addBook(nowaKsiazka);
+	}
+	Member newMember = Member(L"Grzegorz");
+	
+	PK_LIB.displayBooks();
+	cout <<"Koniec"<<endl;
+
+
+
+
 }
 
 // Uruchomienie programu: Ctrl + F5 lub menu Debugowanie > Uruchom bez debugowania
